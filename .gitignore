@@ -18,5 +18,5 @@ package-lock.json
 .idea
 .vscode
 
-# Misc
-assets/js/dist
+# Misc CHECK ISSUE: https://github.com/cotes2020/jekyll-theme-chirpy/issues/942#issuecomment-1479552757
+# assets/js/dist
