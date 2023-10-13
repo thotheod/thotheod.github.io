@@ -4,3 +4,8 @@
 @import 'main';
 
 /* append your custom style below */
+
+:root[data-mode] {
+    --inline-code-bg: #dad2d2d2;        // inline code background color
+    --highlighter-rouge-color: #0e0f30; // inline code text color
+}

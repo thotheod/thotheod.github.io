@@ -12,16 +12,16 @@ I've never been much of a blogger. I didn't use to share my experiences, knowled
 I had definitely toyed with the idea of starting a blog at one point, but I wasn't keen on "investing" in the common blogging platforms with their full-fledged [CMS](https://en.wikipedia.org/wiki/Content_management_system). I was aware of Github Pages, and I knew how to work with Markdown, but it was only when I stumbled upon [Thomas Stringer](https://trstringer.com/) that put everything together :smirk:. 
 
 
-# TL:DR - What I need to get started
+## TL:DR - What I need to get started
 I will start by adding some links and basic tips in this paragrpaph for those that just want to get started quickly.
 - [jekyll](https://jekyllrb.com/docs/): If you love markdown, and want to avoid html/css/javascript as much as possible, or CMS with databases etc, then Jekyll is all you need. This is __THE best__  static site generator (my blog - my opinion :grin:)
   - Linux Machine or [Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install). Jekyll works on windows as well, but is not [officially supported](https://jekyllrb.com/docs/installation/windows/). 
 - GitHub Account to host/use [GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
 - [Chirpy Jekyll theme](https://chirpy.cotes.page/)
 
-# How I create this blog - Detailed Steps
+## How I create this blog - Detailed Steps
 
-## Setup local machine
+### Setup local machine
 I am using a Windows 11 with WSL (running ubuntu 22.00). We need to setup our local machine, so we can author posts, render and test our site (blog) locally; it is really helpful. To do tht we follow the [official instructions for ubuntu](https://jekyllrb.com/docs/installation/ubuntu/)
 
 If we need to verify that everything is working as expected (and if you are curious to have a first taste of how Jekyll is working) do the following steps in your ubuntu shell:
@@ -44,13 +44,13 @@ _Default, empty Jekyll site_
 
 
 
-## Use Chirpy repo and theme
+### Use Chirpy repo and theme
 Jekyl is powerful, but the starting theme you get out-of-the-box is really limited, as you have seen above. You can of course use [Jekyll Themes](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) and you can of course heavily customise your blog. But you can just focus on what you have to say, and start with a heavily customized and opinionated theme, suitable for technical blogs. Enter [Chirpy](https://chirpy.cotes.page/posts/getting-started/) :rocket: ! ! ! !
 
 > Αnything documented here is tested for [release 6.2.3](https://github.com/cotes2020/jekyll-theme-chirpy/releases/tag/v6.2.3)
 {: .prompt-info }
 
-### Setting up Chirpy
+#### Setting up Chirpy
 There are a couple of ways to start with the Chirpy theme, but I personally selected to fork their [original repo](https://github.com/cotes2020/jekyll-theme-chirpy), and do any customisation in my own copy, as required.
 
 Sign in to your GitHub account to [fork the Chirpy repo](https://github.com/cotes2020/jekyll-theme-chirpy/fork), and rename it to `USERNAME.github.io`  (USERNAME is your GitHub handle, in my case this is `thotheod`) 
@@ -92,11 +92,58 @@ bundle
 If everything set correctly, commit your files/changes and push to the blog's repo. The action should run successfully (it should take around a minute) and then you could see your site live.
 To test it locally you can use `bundle exec jekyll serve` or `bash tools/run`
 
-### Basic Customization
+#### Basic Customization
 
-## Typography / Styling Tips
+### Typography / Styling Tips
 
-### Code Snipets
+#### Override color variables
+In the folder `_sass/colors` there are several files for defining basic properties and variables per color scheme. We have:
+- `syntax-dark.scss` and `syntax-light.scss`: These files define variables and properties for the code snippets based on the selected color scheme (dark or light)
+- - `typography-dark.scss` and `typography-light.scss`: These files define variables and properties for the whole site based on the selected color scheme (dark or light)
+
+Inside those files there are several [mixins](https://www.w3schools.com/sass/sass_mixin_include.php) which define [CSS custom properties - variables](https://vaadin.com/docs/v14/ds/customization/css-custom-properties) for defining things like background colors etc. 
+If we spot a specific variable, and we need to change it's value, we should avoid doing that on those files directly. What we can do instead, is to write our overrides in the file `assets/css/jekyll-theme-chirpy.scss`. In order to override a specific variable (i.e. let say we need to make the --main-bg property equal to green), irrespectively of the selected color scheme we do the following/
+
+```css
+/* (we add our values after the existing comment below) */
+/* append your custom style below */
+
+:root[data-mode] {
+    --main-bg: green;
+}
+
+:root[data-mode=light]{
+    --main-bg: green;
+}
+```
+However, if we need to turn the specific value to 
+- red, if the light scheme is selected 
+- green if the dark scheme is selected
+- yellow if no scheme is selected, we can do the following: 
+
+```css
+/* (we add our values after the existing comment below) */
+/* append your custom style below */
+
+:root[data-mode=light]{
+    --main-bg: red;
+}
+
+:root[data-mode=light]{
+    --main-bg: green;
+}
+
+:root:not([data-mode]) {
+    --main-bg: yellow;
+}
+
+```
+
+
+In order to be sure that we are using the higher priority selector (and we surely verride all the values) we use the `:css` pseudo-class that represents the highest-level parent element in the document tree, which is typically the <html> element.
+
+
+#### Code Snipets
 While I love Dark Themes, I think reading a really dark blog page could be cumbersome and tiring for the majority of people. Thus I selected to customize the light theme. However, I really love dark backgrounds when I read code. So I wanted to keep my light theme, but borrow the dark theme for the code snippets. To do so, I customized the `_sass/addon/syntax.scss` file, to always select the `dark-syntax mixin`; regardless of the initial/global color scheme preference. Possibly not the most optimal solution (since it can break sync to the main repo) but certainly an easy one to start with. 
 
 Check below the dark themed code snippets
@@ -115,7 +162,17 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-### Use GitHub emojis
+However if we need to override the background value of the inline code snipets (because we do not like to see black backgrounds inline) then we do the following in the file `assets/css/jekyll-theme-chirpy.scss`
+
+```css
+
+:root[data-mode] {
+    --inline-code-bg: #dad2d2d2;        // inline code background color
+    --highlighter-rouge-color: #0e0f30; // inline code text color
+}
+```
+
+#### Use GitHub emojis
 By default [github emojis](https://gist.github.com/rxaviers/7360908) will not show up in your posts. We need a [plugin](https://jekyllrb.com/docs/plugins/) for that, named [jemoji](https://github.com/jekyll/jemoji). To use this plugin do the following:
 
 ``` bash
@@ -128,7 +185,7 @@ plugins:
 
 ```
 
-### Prompts
+#### Prompts
 
 > Example showing the prompt-tip
 {: .prompt-tip }
@@ -162,7 +219,7 @@ plugins:
 {: .prompt-danger }
 ```
 
-## Useful commands
+### Useful commands
 Below I am gathering some of the basics commands I use to test or build my site
 
 ``` bash
