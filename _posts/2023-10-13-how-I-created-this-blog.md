@@ -14,7 +14,7 @@ I had definitely toyed with the idea of starting a blog at one point, but I wasn
 
 ## TL:DR - What I need to get started
 I will start by adding some links and basic tips in this paragrpaph for those that just want to get started quickly.
-- [jekyll](https://jekyllrb.com/docs/): If you love markdown, and want to avoid html/css/javascript as much as possible, or CMS with databases etc, then Jekyll is all you need. This is __THE best__  static site generator (my blog - my opinion :D)
+- [jekyll](https://jekyllrb.com/docs/): If you love markdown, and want to avoid html/css/javascript as much as possible, or CMS with databases etc, then Jekyll is all you need. This is __THE best__  static site generator (my blog - my opinion :grin:)
   - Linux Machine or [Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install). Jekyll works on windows as well, but is not [officially supported](https://jekyllrb.com/docs/installation/windows/). 
 - GitHub Account to host/use [GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
 - [Chirpy Jekyll theme](https://chirpy.cotes.page/)
