@@ -50,6 +50,48 @@ Jekyl is powerful, but the starting theme you get out-of-the-box is really limit
 > Αnything documented here is tested for [release 6.2.3](https://github.com/cotes2020/jekyll-theme-chirpy/releases/tag/v6.2.3)
 {: .prompt-info }
 
+#### Setting up Chirpy
+There are a couple of ways to start with the Chirpy theme, but I personally selected to fork their [original repo](https://github.com/cotes2020/jekyll-theme-chirpy), and do any customisation in my own copy, as required.
+
+Sign in to your GitHub account to [fork the Chirpy repo](https://github.com/cotes2020/jekyll-theme-chirpy/fork), and rename it to `USERNAME.github.io`  (USERNAME is your GitHub handle, in my case this is `thotheod`) 
+
+Make sure the Build and deployment pipelines are correct:
+- Go to the *Settings* of you repo and under *Code and Automation* click on *Pages* (i.e. https://github.com/USERNAME/USERNAME.github.io/settings/pages). Make sure that *GitHub Actions* is selected for *Build And Deployment > Source*
+- Go to *Actions* and if asked, enable the GitHub Actions names *Build and Deploy*
+
+Next open a Linux shell to clone the repo and start the initial configuration / build
+
+``` bash
+# go to a folder where you will store the blog's repository (change USERNAME to your github account handle)
+git clone https://github.com/USERNAME/USERNAME.github.io.git
+
+# go to the correct folder, after cloning the repo
+cd USERNAME.github.io
+
+# install nodejs if not present yet
+sudo apt-get install Node.js
+
+# check version is greater than v12.22.9
+node -v
+
+# instal npm if not present
+sudo apt-get install npm 
+
+# run the initialization
+bash tools/init
+
+# Before running local server for the first time, go to the root directory of your site and run:
+bundle
+```
+
+> In my case the process above, failed to serve the site, because there were no files in `assets/js/dist/`. To solve that issue I have done the following:
+> - Edit `.gitignore` and remove the `assets/js/dist` (you can comment out with #)
+> - Create the folder missing (`assets/js/dist/`), and copy the required files from `https://github.com/cotes2020/chirpy-demo/tree/main/assets/js/dist`
+{: .prompt-warning  }
+
+If everything set correctly, commit your files/changes and push to the blog's repo. The action should run successfully (it should take around a minue) and then you could see your site live.
+To test it locally you can use ` bundle exec jekyll serve` or `bash tools/run`
+
 ### Typography / Styling Tips
 
 #### Use GitHub emojis
