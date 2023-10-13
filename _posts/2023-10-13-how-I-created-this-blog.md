@@ -140,7 +140,7 @@ However, if we need to turn the specific value to
 ```
 
 
-In order to be sure that we are using the higher priority selector (and we surely verride all the values) we use the `:css` pseudo-class that represents the highest-level parent element in the document tree, which is typically the <html> element.
+In order to be sure that we are using the higher priority selector (and we surely verride all the values) we use the `:root` pseudo-class that represents the highest-level parent element in the document tree, which is typically the <html> element.
 
 
 #### Code Snipets
