@@ -12,16 +12,16 @@ I've never been much of a blogger. I didn't use to share my experiences, knowled
 I had definitely toyed with the idea of starting a blog at one point, but I wasn't keen on "investing" in the common blogging platforms with their full-fledged [CMS](https://en.wikipedia.org/wiki/Content_management_system). I was aware of Github Pages, and I knew how to work with Markdown, but it was only when I stumbled upon [Thomas Stringer](https://trstringer.com/) that put everything together :smirk:. 
 
 
-## TL:DR - What I need to get started
+# TL:DR - What I need to get started
 I will start by adding some links and basic tips in this paragrpaph for those that just want to get started quickly.
 - [jekyll](https://jekyllrb.com/docs/): If you love markdown, and want to avoid html/css/javascript as much as possible, or CMS with databases etc, then Jekyll is all you need. This is __THE best__  static site generator (my blog - my opinion :grin:)
   - Linux Machine or [Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install). Jekyll works on windows as well, but is not [officially supported](https://jekyllrb.com/docs/installation/windows/). 
 - GitHub Account to host/use [GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
 - [Chirpy Jekyll theme](https://chirpy.cotes.page/)
 
-## How I create this blog - Detailed Steps
+# How I create this blog - Detailed Steps
 
-### Setup local machine
+## Setup local machine
 I am using a Windows 11 with WSL (running ubuntu 22.00). We need to setup our local machine, so we can author posts, render and test our site (blog) locally; it is really helpful. To do tht we follow the [official instructions for ubuntu](https://jekyllrb.com/docs/installation/ubuntu/)
 
 If we need to verify that everything is working as expected (and if you are curious to have a first taste of how Jekyll is working) do the following steps in your ubuntu shell:
@@ -44,13 +44,13 @@ _Default, empty Jekyll site_
 
 
 
-### Use Chirpy repo and theme
+## Use Chirpy repo and theme
 Jekyl is powerful, but the starting theme you get out-of-the-box is really limited, as you have seen above. You can of course use [Jekyll Themes](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) and you can of course heavily customise your blog. But you can just focus on what you have to say, and start with a heavily customized and opinionated theme, suitable for technical blogs. Enter [Chirpy](https://chirpy.cotes.page/posts/getting-started/) :rocket: ! ! ! !
 
 > Αnything documented here is tested for [release 6.2.3](https://github.com/cotes2020/jekyll-theme-chirpy/releases/tag/v6.2.3)
 {: .prompt-info }
 
-#### Setting up Chirpy
+### Setting up Chirpy
 There are a couple of ways to start with the Chirpy theme, but I personally selected to fork their [original repo](https://github.com/cotes2020/jekyll-theme-chirpy), and do any customisation in my own copy, as required.
 
 Sign in to your GitHub account to [fork the Chirpy repo](https://github.com/cotes2020/jekyll-theme-chirpy/fork), and rename it to `USERNAME.github.io`  (USERNAME is your GitHub handle, in my case this is `thotheod`) 
@@ -89,12 +89,33 @@ bundle
 > - Create the folder missing (`assets/js/dist/`), and copy the required files from `https://github.com/cotes2020/chirpy-demo/tree/main/assets/js/dist`
 {: .prompt-warning  }
 
-If everything set correctly, commit your files/changes and push to the blog's repo. The action should run successfully (it should take around a minue) and then you could see your site live.
-To test it locally you can use ` bundle exec jekyll serve` or `bash tools/run`
+If everything set correctly, commit your files/changes and push to the blog's repo. The action should run successfully (it should take around a minute) and then you could see your site live.
+To test it locally you can use `bundle exec jekyll serve` or `bash tools/run`
 
-### Typography / Styling Tips
+### Basic Customization
 
-#### Use GitHub emojis
+## Typography / Styling Tips
+
+### Code Snipets
+While I love Dark Themes, I think reading a really dark blog page could be cumbersome and tiring for the majority of people. Thus I selected to customize the light theme. However, I really love dark backgrounds when I read code. So I wanted to keep my light theme, but borrow the dark theme for the code snippets. To do so, I customized the `_sass/addon/syntax.scss` file, to always select the `dark-syntax mixin`; regardless of the initial/global color scheme preference. Possibly not the most optimal solution (since it can break sync to the main repo) but certainly an easy one to start with. 
+
+Check below the dark themed code snippets
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+
+```ruby
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
+end
+```
+
+### Use GitHub emojis
 By default [github emojis](https://gist.github.com/rxaviers/7360908) will not show up in your posts. We need a [plugin](https://jekyllrb.com/docs/plugins/) for that, named [jemoji](https://github.com/jekyll/jemoji). To use this plugin do the following:
 
 ``` bash
@@ -107,7 +128,7 @@ plugins:
 
 ```
 
-#### Prompts
+### Prompts
 
 > Example showing the prompt-tip
 {: .prompt-tip }
@@ -141,7 +162,7 @@ plugins:
 {: .prompt-danger }
 ```
 
-### Useful commands
+## Useful commands
 Below I am gathering some of the basics commands I use to test or build my site
 
 ``` bash
