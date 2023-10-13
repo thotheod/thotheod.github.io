@@ -52,6 +52,19 @@ Jekyl is powerful, but the starting theme you get out-of-the-box is really limit
 
 ### Typography / Styling Tips
 
+#### Use GitHub emojis
+By default [github emojis](https://gist.github.com/rxaviers/7360908) will not show up in your posts. We need a [plugin](https://jekyllrb.com/docs/plugins/) for that, named [jemoji](https://github.com/jekyll/jemoji). To use this plugin do the following:
+
+``` bash
+# Add the following to your site's Gemfile
+gem 'jemoji'
+
+# And add the following to your site's _config.yml
+plugins:
+  - jemoji
+
+```
+
 #### Prompts
 
 > Example showing the prompt-tip
