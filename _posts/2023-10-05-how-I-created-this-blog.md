@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "How I create this Blog"
-date:   2023-10-10 13:00:00 +0300
+title:  "Launch your blog for free with Jekyll and GitHub Pages"
+date:   2023-10-07 13:00:00 +0300
 categories: blog tech
 tags: blog jekyll github-pages
 ---
@@ -93,6 +93,18 @@ If everything set correctly, commit your files/changes and push to the blog's re
 To test it locally you can use `bundle exec jekyll serve` or `bash tools/run`
 
 #### Basic Customization
+The first things you need to configure are found in the file `_config.yml`. Most of the file has comments with thorough explanation. Here you need to configure things like
+- theme style (dark or light)
+- name of the author (your name :) )
+- contact information / social network identifiers
+- number of articles per page etc
+
+#### Posting new messages
+There is a folder named `_posts`. In that folder we store all our new markdown posts. There is some convention that we need to follow. The file names need to follow that format: `YEAR-MONTH-DAY-title.markdown`. 
+
+Every post, has a [front matter](https://jekyllrb.com/docs/front-matter/). This is used to set several things, like tags, categories but also the date of the post. The date used in the front matter is the one used as publishing date. 
+
+If you need to store a post that is is still "in progress" you can create a folder called `_drafts` and store it there. Once finalised, change it's name to follow the aforementioned convetion and move it to the `_posts` folder
 
 ### Typography / Styling Tips
 
