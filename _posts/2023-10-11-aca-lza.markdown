@@ -13,15 +13,15 @@ An [Azure landing zone](https://review.learn.microsoft.com/azure/cloud-adoption-
 
 Azure landing zone accelerators provide architectural guidance, reference architectures, reference implementations, and automation to deploy workload platforms on Azure at scale. They are aligned with industry proven practices, such as those presented in Azure landing zones guidance in the Cloud Adoption Framework.
 
-Landing zone accelerators are open source projects, continuously maintained by Microsoft Program Managers and Azure technical specialists, hosted under the [Azure GitHub](https://github.com/Azure) Organization. For a comprehensive list of available LZAs and regular updates, visit https://aka.ms/lza. 
+Landing zone accelerators are open source projects, continuously maintained by Microsoft Program Managers and Azure technical specialists, hosted under the [Azure GitHub](https://github.com/Azure) Organization. For a comprehensive list of available LZAs and regular updates, visit [aka.ms/lza](https://aka.ms/lza).
 
 ## Azure Container Apps Landing Zone Accelerator
 
 The Azure Container Apps landing zone accelerator is an open-source collection of architectural guidance and reference implementation to accelerate deployment of Azure Container Apps at scale. 
 
-The repository evolves by continually adding new features as they are made available for Azure Container Apps. The most recent (at the time of writing) release [V2.0.0] (https://github.com/Azure/aca-landing-zone-accelerator/releases/tag/V2.0.0) incorporates the latest features from [GA availabiity announcement](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generally-available-azure-container-apps-workload-profiles-more/ba-p/3913345)
+The repository evolves by continually adding new features as they are made available for Azure Container Apps. The most recent (at the time of writing) release [V2.0.0](https://github.com/Azure/aca-landing-zone-accelerator/releases/tag/V2.0.0) incorporates the latest features from [GA availabiity announcement](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generally-available-azure-container-apps-workload-profiles-more/ba-p/3913345)
 
-You can find the GitHub Repo for the Azure Container Apps Landing Zone Accelerator here: https://aka.ms/aca-lza 
+You can find the GitHub Repo for the Azure Container Apps Landing Zone Accelerator here: [aka.ms/aca-lza](https://aka.ms/aca-lza)
 
 ### Secure Baseline Architecture
 The repository  presents a scenario called ["Secure Baseline"](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/security-baseline/). In this scenario, the fundamental decisions taken for what we call the secure baseline are:
@@ -59,7 +59,7 @@ The architecture is considered across four key design areas. Please review them 
 ### IaC option
 The Reference Implemention is supporting two options
 - [Azure Bicep](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep). 
-- [Terraform] (https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/terraform)
+- [Terraform](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/terraform)
 
 Both implementations follow best practices, as descibed in the [contributing](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/CONTRIBUTING.md#contributing) document. Special care has been given to:
 - Cloud Adoption Framework [Naming Convention](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) which is using in an easy way [Azure Resource Abbreviations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) and [Naming rules and restrictions](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules) for Azure resources, so that we avoid deployment failures and inconsistency in the naming of the resources
