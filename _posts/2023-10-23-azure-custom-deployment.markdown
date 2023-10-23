@@ -70,7 +70,7 @@ To illustrate this process, let's consider a basic [bicep deployment file](https
 - Virtual Network
 - Log Analytics Workspace
 
-![Sample Deployment Resources](/images/azure-custom-deployment/sample-deployment-start.jpg)
+![Sample Deployment Resources](/images/azure-custom-deployment/sample-deployment-start.jpg){: height="600" width="400"  }
 _Sample Deployment Resources_
 
 The first step is to convert the Bicep file into a JSON ARM template, which can be done by running the following command:
@@ -118,7 +118,7 @@ and they are illustrated below:
 
 For very large templates with numerous parameters, manually constructing this JSON representation of the UX form can be daunting. To expedite this process, you can use the [aka.ms/form/sandbox](https://aka.ms/form/sandbox). Select your json template in the file selector labeled "Deployment Template (optional)", make sure that `Package Type = CustomTemplate` and select "yes" when asked if you want to Auto Generate the Create UI Definition, as shown below. 
 
-![Auto Generate the Create UI Definition](/images/azure-custom-deployment/autoGenerateUIDefiniton.jpg)
+![Auto Generate the Create UI Definition](/images/azure-custom-deployment/autoGenerateUIDefiniton.jpg){: width="600" height="250" }
 _Auto Generate the Create UI Definition_
 
 The [generated UI Definiton json file](https://github.com/thotheod/bicep-modules-helper/blob/main/_testModules/deploy-ux.start.json) will be used as a base for configuring the UI of the form. 
@@ -144,14 +144,14 @@ _Add Extra Steps_
 
 However, this alone is not sufficient. If you try to test the form now, it will fail because the `outputs > parameters` for the UI elements you moved do not match. You will encounter an error message similar to the one below:
 
-![UI Element cannot be found error](/images/azure-custom-deployment/error-ui-element.jpg)
+![UI Element cannot be found error](/images/azure-custom-deployment/error-ui-element.jpg){: width="600" height="300" }
 _UI Element cannot be found error_
 
 To reference the value of an element in the parameters section, you need to provide the entire path. For all the moved elements, change the value from `"vnetAddressSpace": "[steps('basics').vnetAddressSpace]"` to `"vnetAddressSpace": "[steps('networking').vnetAddressSpace]"`.
 
 The [new form](https://github.com/thotheod/bicep-modules-helper/blob/main/_testModules/deploy-ux.steps.json) now looks like this:
 
-![Sample Deployment step 1](/images/azure-custom-deployment/sample-deployment-step1.jpg)
+![Sample Deployment step 1](/images/azure-custom-deployment/sample-deployment-step1.jpg){: width="700" height="350" }
 _Sample Deployment step 1_
 
 ![Sample Deployment step 2](/images/azure-custom-deployment/sample-deployment-step2.jpg)
