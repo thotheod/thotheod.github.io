@@ -14,7 +14,7 @@ timezone: Europe/Athens
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Cloud thoughts # the main title
+title: Nimbus Musings # the main title
 
 tagline: Azure, Containers, Software Architecture... and beyond # it will display as the sub-title
 
