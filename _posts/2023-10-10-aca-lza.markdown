@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What is Azure Container Apps LZA and how it can help me"
-date:   2023-10-11 11:45:00 +0300
+date:   2023-10-10 11:45:00 +0300
 categories: Azure IaC
 tags: azure iac bicep container-apps containers architecture
 ---
@@ -25,7 +25,7 @@ You can find the GitHub Repo for the Azure Container Apps Landing Zone Accelerat
 
 ### Secure Baseline Architecture
 The repository  presents a scenario called ["Secure Baseline"](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/security-baseline/). In this scenario, the fundamental decisions taken for what we call the secure baseline are:
-  Uuse Azure Container Apps deployed on a [custom Virtual Network](https://learn.microsoft.com/azure/container-apps/vnet-custom)
+  Use Azure Container Apps deployed on a [custom Virtual Network](https://learn.microsoft.com/azure/container-apps/vnet-custom)
 - [Internal Accesibilty level](https://learn.microsoft.com/azure/container-apps/networking?tabs=azure-cli#accessibility-levels). Internal environments have no public endpoints and are deployed with a virtual IP (VIP) mapped to an internal IP address.
 - Secure all subnets with [Network Security Groups(NSG)](https://learn.microsoft.com/azure/container-apps/firewall-integration#nsg-allow-rules)
 - Control egress traffic with [Azure Firewall](https://learn.microsoft.com/en-us/azure/container-apps/user-defined-routes). The benefits of such a setup are numerous; to name some:
@@ -40,7 +40,7 @@ The repository  presents a scenario called ["Secure Baseline"](https://learn.mic
 - Use [Azure Policies](https://learn.microsoft.com/azure/container-apps/policy-reference) for securing the deployment of apps on the Azure Container Apps environment, for enforcing organizational standards and to assess compliance at-scale.
 - Use [Azure Container Registry Premium](https://learn.microsoft.com/azure/container-registry/ forcontainer-registry-skus) to store and manage your container images and related artifacts, with Zone redundancyenabled, for enhanced High Availabilty. 
 - Use [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/basic-concepts) to securely store and access secrets, such as API keys, passwords, certificates, connection strings and other.
-- Use [User Assigned Managed Identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) for securing with fine0grain access of the container apps to other resources (i.e. Azure Key Vault, databases etc)
+- Use [User Assigned Managed Identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) for securing with fine grain access of the container apps to other resources (i.e. Azure Key Vault, databases etc)
 - Use [Azure Bastion Services](https://learn.microsoft.com/azure/bastion/bastion-overview) to securely connect to private Jump-boxes or self-hosted devops agents, to deploy your applications. 
 
 The diagram below illustrates the architecrure. The reference implementation will create all the resources as shown in the diagram, except for the ones behind the gray background, i.e., GatewaySubnet. In reality, most organizations should already have a Hub network in place, but for the sake of completeness, we provide an implementation for that as well. If the hub is not required in your deployment, it can be safely removed from the deployment artifacts with little customization.
