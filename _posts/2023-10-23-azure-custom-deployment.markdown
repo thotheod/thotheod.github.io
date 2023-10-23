@@ -7,7 +7,7 @@ tags: azure iac bicep azure-portal arm github
 ---
 
 
-Deploying infrastructure and Azure resources efficiently is crucial. Azureoffers a powerful solution for this through its Azure Resource Manager (ARM) templates and the "Deploy to Azure" button. In this blog post, we'll explore how you can create a seamless and user-friendly experience for custom deployments on the Azure portal. Let's dive in.
+Deploying infrastructure and Azure resources efficiently is crucial. Azure offers a powerful solution for this through its Azure Resource Manager (ARM) templates and the "Deploy to Azure" button. In this blog post, we'll explore how you can create a seamless and user-friendly experience for custom deployments on the Azure portal. Let's dive in.
 
 ## Custom Azure Deployment "Deploy To Azure" Button
 

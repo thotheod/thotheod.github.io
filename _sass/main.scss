@@ -18,6 +18,10 @@
 //     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(167,14,14,1) 100%);
 // }
 
-// .nav-item.active a.nav-link {
-//     color: var(--sidebar-bg)
-// }
+.post-meta.mb-3 {
+    display: none;
+}
+
+.license-wrapper {
+    display: none;
+}
