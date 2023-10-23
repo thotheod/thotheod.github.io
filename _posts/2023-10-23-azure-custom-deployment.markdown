@@ -252,7 +252,7 @@ To Uue this custom UX form with the “Deploy To Azure” Button you need to con
 - "redirection" to the uiFormDefinitonUri: `/uiFormDefinitionUri/`
 - `CUSTOM_UI_DEF_JSON`: The URL Encoded version of the URI to the custom UI Definition json file
 
-The actual link for our sample deployment demonstrated in this post, can be found here: 
+The [actual link for our sample deployment](https://portal.azure.com/#view/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fthotheod%2Fbicep-modules-helper%2Fmain%2F_testModules%2Fdeploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2Fthotheod%2Fbicep-modules-helper%2Fmain%2F_testModules%2Fdeploy-ux.conditional.json) demonstrated in this post, can be constructed as shown below: 
 
 ```html
 
