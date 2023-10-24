@@ -56,9 +56,9 @@ The architecture is considered across four key design areas. Please review them 
 - [Management and Monitoring](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/docs/design-areas/management.md)
 - [Security, Governance, and Compliance](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/docs/design-areas/security.md)
 
-### IaC option
+### Infrastructure as Code (IaC) options
 The Reference Implemention is supporting two options
-- [Azure Bicep](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep). 
+- [Azure Bicep](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep)
 - [Terraform](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/terraform)
 
 Both implementations follow best practices, as descibed in the [contributing](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/CONTRIBUTING.md#contributing) document. Special care has been given to:
@@ -72,14 +72,14 @@ A complete deployment of the ACA LZA (both Hub and Spoke network and Azure resou
 
 #### Deployment Automation
 - [Azure devops pipelne](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/.ado/lza-deployment_bicep.yaml)
-- [Github Actions](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/.github/workflows/lza-deployment.yml). 
+- [Github Actions](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/.github/
 
 Both deployment automation methods are comprised of the following steps:
-  - lint: Executes `az bicep build` on the `main.bicep` file
-  - validate: Runs preflight validation
-  - preview: Runs a [what-if operation] (https://learn.microsoft.com/azure/azure-resource-manager/templates/deploy-what-if?tabs=azure-powershell) to let you see how resources will change if you deploy the template
-  - deploy: Runs the actual deployment
-  - teardown: This step is optional (executed only if the user selects so by answering 'yes' to an issue opened by the deploy step) and is used to clean-up all deployed resources.
+  - **lint**: Executes `az bicep build` on the `main.bicep` file
+  - **validate**: Runs preflight validation
+  - **preview**: Runs a [what-if operation] (https://learn.microsoft.com/azure/azure-resource-manager/templates/deploy-what-if?tabs=azure-powershell) to let you see how resources will change if you deploy the template
+  - **deploy**: Runs the actual deployment
+  - **teardown**: This step is optional (executed only if the user selects so by answering 'yes' to an issue opened by the deploy step) and is used to clean-up all deployed resources.
 
 ![GitHub Action steps](/images/aca-lza/aca-lza-gh-action.jpg)
 _GitHub Action steps_
@@ -94,10 +94,10 @@ You can manually deploy the LZA by either using the BICEP or the Terraform IaC a
 - [Terraform standalone deployment method](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/terraform#standalone-deployment-guide)
 
 
-##### AZD and Devcontainers
-See details here: https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep#using-codespaces-via-azure-dev-cli 
+##### AZD and GitHub Codespaces
+You can deploy everything with [Azure Developer (AZD) CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview) and [GitHub Codespaces](https://docs.github.com/codespaces, as described here: [AZD & Codespaces](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep#using-codespaces-via-azure-dev-cli )
 
-##### Deploy To Azure Button
+##### 'Deploy To Azure' Button
 The quickest method to deploy the LZA is to click on the ["Deploy To Azure"](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep#deploy-to-azure-via-portal) button.
 
 This will redirect you to the Azure Portal, where a series of steps will guide you through the customization of the deployment based on your needs. These steps include:
