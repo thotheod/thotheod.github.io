@@ -156,11 +156,7 @@ In order to be sure that we are using the higher priority selector (and we surel
 
 #### Override CSS default behavior
 
-You can use the file `/_sass/main.scss` to over-write any CSS default behavior. This file imports all the individual *scss* files, and at the end of it we can add our own CSS variations. For instance with Chirpy at the end of every post, you get some elements for
-- category of the blog post
-- tags of the blog post
-- license
-- share links
+You have the flexibility to customize the default CSS behavior by utilizing the `/_sass/main.scss` file. This file serves as the central point for importing all individual scss files, allowing you to introduce your own CSS modifications. As an example, with Chirpy, you can tailor the appearance of several elements that appear at the end of each blog post. These elements include the blog post's category, tags, licensing information, and social sharing links.
 
 ![Default Blog Post 'includes'](/images/how-to-blog/blog-post-default.png){: width="600" height="180" }
 _Default Blog Post 'includes'_
