@@ -154,6 +154,38 @@ However, if we need to turn the specific value to
 
 In order to be sure that we are using the higher priority selector (and we surely verride all the values) we use the `:root` pseudo-class that represents the highest-level parent element in the document tree, which is typically the <html> element.
 
+#### Override CSS default behavior
+
+You can use the file `/_sass/main.scss` to over-write any CSS default behavior. This file imports all the individual *scss* files, and at the end of it we can add our own CSS variations. For instance with Chirpy at the end of every post, you get some elements for
+- category of the blog post
+- tags of the blog post
+- license
+- share links
+
+![Default Blog Post 'includes'](/images/how-to-blog/blog-post-default.png){: width="600" height="180" }
+_Default Blog Post 'includes'_
+
+In my case I do not want the categories and the license related message to show up at the end of every blog post, so with the snippet below I hide out.
+
+```css
+...
+...
+@import 'layout/categories';
+@import 'layout/category-tag';
+
+//TODO: add css here to over-write the default css
+
+// hide categries from the blog post end
+.post-meta.mb-3 {
+    display: none;
+}
+
+// hide the license from the blog post end
+.license-wrapper {
+    display: none;  
+}
+```
+
 
 #### Code Snipets
 While I love Dark Themes, I think reading a really dark blog page could be cumbersome and tiring for the majority of people. Thus I selected to customize the light theme. However, I really love dark backgrounds when I read code. So I wanted to keep my light theme, but borrow the dark theme for the code snippets. To do so, I customized the `_sass/addon/syntax.scss` file, to always select the `dark-syntax mixin`; regardless of the initial/global color scheme preference. Possibly not the most optimal solution (since it can break sync to the main repo) but certainly an easy one to start with. 
