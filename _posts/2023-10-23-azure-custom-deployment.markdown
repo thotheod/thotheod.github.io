@@ -121,12 +121,12 @@ For very large templates with numerous parameters, manually constructing this JS
 ![Auto Generate the Create UI Definition](/images/azure-custom-deployment/autoGenerateUIDefiniton.jpg){: width="600" height="250" }
 _Auto Generate the Create UI Definition_
 
-The [generated UI Definiton json file](https://github.com/thotheod/bicep-modules-helper/blob/main/_testModules/deploy-ux.start.json) will be used as a base for configuring the UI of the form. 
+The [generated UI Definition json file](https://github.com/thotheod/bicep-modules-helper/blob/main/_testModules/deploy-ux.start.json) will be used as a base for configuring the UI of the form. 
 
 #### Configuring the UI Portal form
 
 In the generated JSON, you can change the form's `title`, which can be found at `view > properties > title`. 
-You can also rearrange the order in which the UI elements appear in the form. The [UI elements](https://learn.microsoft.com/en-us/azure/azure-resource-manager/managed-applications/create-uidefinition-elements) can be found at  `view > properties > steps > elements`. As you see in the [documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/managed-applications/create-uidefinition-elements) there are various UI elements available, including text boxes, drop-downs, checkboxes, and text blocks. You can preview the changes you make in the [Create UI Definition Sandbox](https://aka.ms/form/sandbox), by clicking the preview button. Additionally, you can copy element JSON snippets and paste them into your JSON UI Definition to experiment with different UI elements. 
+You can also rearrange the order in which the UI elements appear in the form. The [UI elements](https://learn.microsoft.com/azure/azure-resource-manager/managed-applications/create-uidefinition-elements) can be found at  `view > properties > steps > elements`. As you see in the [documentation](https://learn.microsoft.com/azure/azure-resource-manager/managed-applications/create-uidefinition-elements) there are various UI elements available, including text boxes, drop-downs, checkboxes, and text blocks. You can preview the changes you make in the [Create UI Definition Sandbox](https://aka.ms/form/sandbox), by clicking the preview button. Additionally, you can copy element JSON snippets and paste them into your JSON UI Definition to experiment with different UI elements. 
 
 #### Creating "Steps" for the UI Portal form
 Let's start by grouping the parameters from the [test deployment](https://github.com/thotheod/bicep-modules-helper/blob/main/_testModules/deploy-ux.start.json) given above in two distinct steps. The first step will encompass the basic settings for the deployed resources, while the second step will focus on parameters related to the underlying networking. The way you organize and present these parameters in the custom UI definition form is subjective and is adequate as long as it aligns with your goals.
@@ -266,6 +266,7 @@ https://portal.azure.com/#view/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade
 https://portal.azure.com/#view/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fthotheod%2Fbicep-modules-helper%2Fmain%2F_testModules%2Fdeploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2Fthotheod%2Fbicep-modules-helper%2Fmain%2F_testModules%2Fdeploy-ux.conditional.json
 
 ```
+
 This link allows you to integrate the custom UI definition form seamlessly with the "Deploy To Azure" Button, enhancing the deployment experience for your users. If you're looking for more advanced examples of this approach, you can explore the following resources:
 - [ACA LZA](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/azure-resource-manager) 
 - [App Service LZA](https://github.com/Azure/appservice-landing-zone-accelerator/tree/main/scenarios/secure-baseline-multitenant/azure-resource-manager)

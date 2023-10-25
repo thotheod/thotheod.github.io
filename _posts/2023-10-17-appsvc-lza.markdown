@@ -11,14 +11,14 @@ nimbus-musings.com
 The Azure App Service landing zone accelerator is an open-source collection of architectural guidance and reference implementation to accelerate deployment of Azure App Service at scale. Latest release [v1.0.2](https://github.com/Azure/appservice-landing-zone-accelerator/releases/tag/v1.0.2) covers two different scenarios.
 
 ## Scenario 1: Multi-tenant App Service Secure Baseline
- This reference architecture shows how to run a web application workload on Azure App Service Plan in a secure configuration. This secure baseline follow [Defence in Depth](https://learn.microsoft.com/en-us/shows/azure-videos/defense-in-depth-security-in-azure) approach to protect App Service workload against cloud vulnerabilities along with additional Well-Architected Framework pillars to enable a resilient solution. 
+ This reference architecture shows how to run a web application workload on Azure App Service Plan in a secure configuration. This secure baseline follow [Defense in Depth](https://learn.microsoft.com/shows/azure-videos/defense-in-depth-security-in-azure) approach to protect App Service workload against cloud vulnerabilities along with additional Well-Architected Framework pillars to enable a resilient solution. 
 
  The main characteristics of this scenario are:
 - Use web apps with VNet Integration and private endpoint. No public IP to the web apps.
 - Use app service deployment slots for enabling Blue-Green Deployment scenarios
 - Secure all subnets with [Network Security Groups(NSG)](https://learn.microsoft.com/azure/container-apps/firewall-integration#nsg-allow-rules)
-- Control egress traffic with [Azure Firewall](https://learn.microsoft.com/en-us/azure/container-apps/user-defined-routes). The benefits of such a setup are numerous; to name some:
-  - **Data protection / data exfiltration prevention**: You can prevent malware or malicious software within your environment from communicating with external command and control servers. This can help in identifying and stopping cyber threats before they cause significant damag)
+- Control egress traffic with [Azure Firewall](https://learn.microsoft.com//azure/container-apps/user-defined-routes). The benefits of such a setup are numerous; to name some:
+  - **Data protection / data exfiltration prevention**: You can prevent malware or malicious software within your environment from communicating with external command and control servers. This can help in identifying and stopping cyber threats before they cause significant damage)
   - **Compliance**: regulatory frameworks, such as GDPR, HIPAA, and PCI DSS, require organizations to have controls in place to monitor and restrict outbound traffic
   - **Access Control**: Egress control allows you to specify which applications and services can access external resources, reducing the attack surface and limiting the potential for exposure to vulnerabilities in those applications)
   - **Visibility and Monitoring**: Azure Firewall provides the ability to log and analyze outbound traffic. This visibility is essential for detecting suspicious activities, security incidents, and compliance auditing.
@@ -33,7 +33,7 @@ The Azure App Service landing zone accelerator is an open-source collection of a
 _Multitenant App Service LZA_
 
 ## Scenario 2: Line of Business application using internal App Service Environment v3
-This scenario covers how to run a web-app workload for line of business applications on Azure App Services Environment (ASEv3), in an internal configuration. The functionality is similar to the first scenario, with the difference that all the web apps are not exposed by any resource to the pulbic internet.
+This scenario covers how to run a web-app workload for line of business applications on Azure App Services Environment (ASEv3), in an internal configuration. The functionality is similar to the first scenario, with the difference that all the web apps are not exposed by any resource to the public internet.
 
 > This scenario is soon to be set obsolete. The Usage of ASEv3 (or multitenant app service plan) will be integrated in the first scenario, in the form of a feature flag.
 {: .prompt-warning  }
@@ -53,14 +53,14 @@ The architecture is considered across six key design areas. Please review them a
 - [Application Automation and DevOps](https://github.com/Azure/appservice-landing-zone-accelerator/blob/main/docs/Design-Areas/automation-devops.md)
 
 ## Infrastructure as Code (IaC) options
-The Reference Implemention is supporting two options:
+The Reference Implementation is supporting two options:
 - [Bicep](https://github.com/Azure/appservice-landing-zone-accelerator/tree/main/scenarios/secure-baseline-multitenant/bicep)
 - [Terraform](https://github.com/Azure/appservice-landing-zone-accelerator/tree/main/scenarios/secure-baseline-multitenant/terraform)
 
-Both implementations follow best practices, as descibed in the [contributing](https://github.com/Azure/appservice-landing-zone-accelerator/blob/main/CONTRIBUTING.md) document. Special care has been given to:
+Both implementations follow best practices, as described in the [contributing](https://github.com/Azure/appservice-landing-zone-accelerator/blob/main/CONTRIBUTING.md) document. Special care has been given to:
 - Cloud Adoption Framework [Naming Convention](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) which is using in an easy way [Azure Resource Abbreviations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) and [Naming rules and restrictions](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules) for Azure resources, so that we avoid deployment failures and inconsistency in the naming of the resources
 - Modularized approach for improved readability of the code and for easier customization
-- Usage of well established builing blocks, such as the ones presented in [Common Azure Resource Modules Library](https://github.com/Azure/ResourceModules)
+- Usage of well established building blocks, such as the ones presented in [Common Azure Resource Modules Library](https://github.com/Azure/ResourceModules)
 
 ### 'Deploy To Azure' Button
 The quickest method to deploy the LZA is to click on the ["Deploy To Azure"](https://github.com/Azure/appservice-landing-zone-accelerator/blob/main/scenarios/secure-baseline-multitenant/README.md#quick-deployment-to-azure) button.

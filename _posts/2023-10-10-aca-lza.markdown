@@ -19,17 +19,17 @@ Landing zone accelerators are open source projects, continuously maintained by M
 
 The Azure Container Apps landing zone accelerator is an open-source collection of architectural guidance and reference implementation to accelerate deployment of Azure Container Apps at scale. 
 
-The repository evolves by continually adding new features as they are made available for Azure Container Apps. The most recent (at the time of writing) release [V2.0.0](https://github.com/Azure/aca-landing-zone-accelerator/releases/tag/V2.0.0) incorporates the latest features from [GA availabiity announcement](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generally-available-azure-container-apps-workload-profiles-more/ba-p/3913345)
+The repository evolves by continually adding new features as they are made available for Azure Container Apps. The most recent (at the time of writing) release [V2.0.0](https://github.com/Azure/aca-landing-zone-accelerator/releases/tag/V2.0.0) incorporates the latest features from [GA availability announcement](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generally-available-azure-container-apps-workload-profiles-more/ba-p/3913345)
 
 You can find the GitHub Repo for the Azure Container Apps Landing Zone Accelerator here: [aka.ms/aca-lza](https://aka.ms/aca-lza)
 
 ### Secure Baseline Architecture
-The repository  presents a scenario called ["Secure Baseline"](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/security-baseline/). In this scenario, the fundamental decisions taken for what we call the secure baseline are:
+The repository  presents a scenario called ["Secure Baseline"](https://learn.microsoft.com/azure/cloud-adoption-framework/govern/security-baseline/). In this scenario, the fundamental decisions taken for what we call the secure baseline are:
   Use Azure Container Apps deployed on a [custom Virtual Network](https://learn.microsoft.com/azure/container-apps/vnet-custom)
-- [Internal Accesibilty level](https://learn.microsoft.com/azure/container-apps/networking?tabs=azure-cli#accessibility-levels). Internal environments have no public endpoints and are deployed with a virtual IP (VIP) mapped to an internal IP address.
+- [Internal Accessibility level](https://learn.microsoft.com/azure/container-apps/networking?tabs=azure-cli#accessibility-levels). Internal environments have no public endpoints and are deployed with a virtual IP (VIP) mapped to an internal IP address.
 - Secure all subnets with [Network Security Groups(NSG)](https://learn.microsoft.com/azure/container-apps/firewall-integration#nsg-allow-rules)
-- Control egress traffic with [Azure Firewall](https://learn.microsoft.com/en-us/azure/container-apps/user-defined-routes). The benefits of such a setup are numerous; to name some:
-  - **Data protection / data exfiltration prevention**: You can prevent malware or malicious software within your environment from communicating with external command and control servers. This can help in identifying and stopping cyber threats before they cause significant damag)
+- Control egress traffic with [Azure Firewall](https://learn.microsoft.com/azure/container-apps/user-defined-routes). The benefits of such a setup are numerous; to name some:
+  - **Data protection / data exfiltration prevention**: You can prevent malware or malicious software within your environment from communicating with external command and control servers. This can help in identifying and stopping cyber threats before they cause significant damage)
   - **Compliance**: regulatory frameworks, such as GDPR, HIPAA, and PCI DSS, require organizations to have controls in place to monitor and restrict outbound traffic
   - **Access Control**: Egress control allows you to specify which applications and services can access external resources, reducing the attack surface and limiting the potential for exposure to vulnerabilities in those applications)
   - **Visibility and Monitoring**: Azure Firewall provides the ability to log and analyze outbound traffic. This visibility is essential for detecting suspicious activities, security incidents, and compliance auditing.
@@ -38,12 +38,12 @@ The repository  presents a scenario called ["Secure Baseline"](https://learn.mic
 - Use Azure native PaaS services for supporting resources required by your application (i.e. Databases) which are exposed only through Private Endpoints
 - Use [Azure DDoS IP protection](https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview#ddos-ip-protection) for the public IP of the Application Gateway.
 - Use [Azure Policies](https://learn.microsoft.com/azure/container-apps/policy-reference) for securing the deployment of apps on the Azure Container Apps environment, for enforcing organizational standards and to assess compliance at-scale.
-- Use [Azure Container Registry Premium](https://learn.microsoft.com/azure/container-registry/ forcontainer-registry-skus) to store and manage your container images and related artifacts, with Zone redundancyenabled, for enhanced High Availabilty. 
+- Use [Azure Container Registry Premium](https://learn.microsoft.com/azure/container-registry/container-registry-skus) to store and manage your container images and related artifacts, with Zone redundancy enabled, for enhanced High Availability. 
 - Use [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/basic-concepts) to securely store and access secrets, such as API keys, passwords, certificates, connection strings and other.
 - Use [User Assigned Managed Identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) for securing with fine grain access of the container apps to other resources (i.e. Azure Key Vault, databases etc)
 - Use [Azure Bastion Services](https://learn.microsoft.com/azure/bastion/bastion-overview) to securely connect to private Jump-boxes or self-hosted devops agents, to deploy your applications. 
 
-The diagram below illustrates the architecrure. The reference implementation will create all the resources as shown in the diagram, except for the ones behind the gray background, i.e., GatewaySubnet. In reality, most organizations should already have a Hub network in place, but for the sake of completeness, we provide an implementation for that as well. If the hub is not required in your deployment, it can be safely removed from the deployment artifacts with little customization.
+The diagram below illustrates the architecture. The reference implementation will create all the resources as shown in the diagram, except for the ones behind the gray background, i.e., GatewaySubnet. In reality, most organizations should already have a Hub network in place, but for the sake of completeness, we provide an implementation for that as well. If the hub is not required in your deployment, it can be safely removed from the deployment artifacts with little customization.
 
 ![Azure Container Apps - Secure Baseline LZA](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/docs/media/acaInternal/aca-internal.jpg?raw=true)
 _Azure Container Apps - Secure Baseline LZA_
@@ -57,21 +57,21 @@ The architecture is considered across four key design areas. Please review them 
 - [Security, Governance, and Compliance](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/docs/design-areas/security.md)
 
 ### Infrastructure as Code (IaC) options
-The Reference Implemention is supporting two options
+The Reference Implementation is supporting two options
 - [Azure Bicep](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep)
 - [Terraform](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/terraform)
 
-Both implementations follow best practices, as descibed in the [contributing](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/CONTRIBUTING.md#contributing) document. Special care has been given to:
+Both implementations follow best practices, as described in the [contributing](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/CONTRIBUTING.md#contributing) document. Special care has been given to:
 - Cloud Adoption Framework [Naming Convention](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) which is using in an easy way [Azure Resource Abbreviations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) and [Naming rules and restrictions](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules) for Azure resources, so that we avoid deployment failures and inconsistency in the naming of the resources
 - Modularized approach for improved readability of the code and for easier customization
-- Usage of well established builing blocks, such as the ones presented in [Common Azure Resource Modules Library](https://github.com/Azure/ResourceModules)
+- Usage of well established building blocks, such as the ones presented in [Common Azure Resource Modules Library](https://github.com/Azure/ResourceModules)
 
 
 ### Automation and deployment options
 A complete deployment of the ACA LZA (both Hub and Spoke network and Azure resources) can be accomplished through various methods. 
 
 #### Deployment Automation
-- [Azure devops pipelne](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/.ado/lza-deployment_bicep.yaml)
+- [Azure devops pipeline](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/.ado/lza-deployment_bicep.yaml)
 - [Github Actions](https://github.com/Azure/aca-landing-zone-accelerator/blob/main/.github/
 
 Both deployment automation methods are comprised of the following steps:
@@ -88,7 +88,7 @@ _GitHub Action steps_
 
 ##### Manual Deployment
 
-You can manually deploy the LZA by either using the BICEP or the Terraform IaC artifacts. You need the [latest Az CLI](https://learn.microsoft.com/el-gr/cli/azure/install-azure-cli?view=azure-cli-latest) (must be at least 2.40), or you can perform this from [Azure Cloud Shell.](https://learn.microsoft.com/en-us/azure/cloud-shell/overview)
+You can manually deploy the LZA by either using the BICEP or the Terraform IaC artifacts. You need the [latest Az CLI](https://learn.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) (must be at least 2.40), or you can perform this from [Azure Cloud Shell.](https://learn.microsoft.com/azure/cloud-shell/overview)
 
 - [Bicep standalone deployment method](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/bicep#standalone-deployment-guide)
 - [Terraform standalone deployment method](https://github.com/Azure/aca-landing-zone-accelerator/tree/main/scenarios/aca-internal/terraform#standalone-deployment-guide)
@@ -107,5 +107,5 @@ This will redirect you to the Azure Portal, where a series of steps will guide y
 - Jump-Box Settings: Provide details if you need a Jumpbox VM, including VM SKU, username, and password.
 - Deployment feature flag: the final deployment by adding extra resources like Redis Cache, Bastion Service, etc., using simple true/false parameters.
 
-![ACA LZA Azure prtal deployment](/images/aca-lza/aca-lza-portal-deployment.jpg)
+![ACA LZA Azure portal deployment](/images/aca-lza/aca-lza-portal-deployment.jpg)
 _ACA LZA Azure portal deployment_

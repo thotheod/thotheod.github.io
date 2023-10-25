@@ -13,9 +13,9 @@ I had definitely toyed with the idea of starting a blog at one point, but I wasn
 
 
 ## TL:DR - What I need to get started
-I will start by adding some links and basic tips in this paragrpaph for those that just want to get started quickly.
+I will start by adding some links and basic tips in this paragraph for those that just want to get started quickly.
 - [jekyll](https://jekyllrb.com/docs/): If you love markdown, and want to avoid html/css/javascript as much as possible, or CMS with databases etc, then Jekyll is all you need. This is __THE best__  static site generator (my blog - my opinion :grin:)
-  - Linux Machine or [Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install). Jekyll works on windows as well, but is not [officially supported](https://jekyllrb.com/docs/installation/windows/). 
+  - Linux Machine or [Windows with WSL](https://learn.microsoft.com/windows/wsl/install). Jekyll works on windows as well, but is not [officially supported](https://jekyllrb.com/docs/installation/windows/). 
 - GitHub Account to host/use [GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
 - [Chirpy Jekyll theme](https://chirpy.cotes.page/)
 
@@ -45,13 +45,13 @@ _Default, empty Jekyll site_
 
 
 ### Use Chirpy repo and theme
-Jekyl is powerful, but the starting theme you get out-of-the-box is really limited, as you have seen above. You can of course use [Jekyll Themes](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) and you can of course heavily customise your blog. But you can just focus on what you have to say, and start with a heavily customized and opinionated theme, suitable for technical blogs. Enter [Chirpy](https://chirpy.cotes.page/posts/getting-started/) :rocket: ! ! ! !
+Jekyll is powerful, but the starting theme you get out-of-the-box is really limited, as you have seen above. You can of course use [Jekyll Themes](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) and you can of course heavily customize your blog. But you can just focus on what you have to say, and start with a heavily customized and opinionated theme, suitable for technical blogs. Enter [Chirpy](https://chirpy.cotes.page/posts/getting-started/) :rocket: ! ! ! !
 
-> Αnything documented here is tested for [release 6.2.3](https://github.com/cotes2020/jekyll-theme-chirpy/releases/tag/v6.2.3)
+> Anything documented here is tested for [release 6.2.3](https://github.com/cotes2020/jekyll-theme-chirpy/releases/tag/v6.2.3)
 {: .prompt-info }
 
 #### Setting up Chirpy
-There are a couple of ways to start with the Chirpy theme, but I personally selected to fork their [original repo](https://github.com/cotes2020/jekyll-theme-chirpy), and do any customisation in my own copy, as required.
+There are a couple of ways to start with the Chirpy theme, but I personally selected to fork their [original repo](https://github.com/cotes2020/jekyll-theme-chirpy), and do any customization in my own copy, as required.
 
 Sign in to your GitHub account to [fork the Chirpy repo](https://github.com/cotes2020/jekyll-theme-chirpy/fork), and rename it to `USERNAME.github.io`  (USERNAME is your GitHub handle, in my case this is `thotheod`) 
 
@@ -104,7 +104,7 @@ There is a folder named `_posts`. In that folder we store all our new markdown p
 
 Every post, has a [front matter](https://jekyllrb.com/docs/front-matter/). This is used to set several things, like tags, categories but also the date of the post. The date used in the front matter is the one used as publishing date. 
 
-If you need to store a post that is is still "in progress" you can create a folder called `_drafts` and store it there. Once finalised, change it's name to follow the aforementioned convetion and move it to the `_posts` folder
+If you need to store a post that is is still "in progress" you can create a folder called `_drafts` and store it there. Once finalized, change it's name to follow the aforementioned convention and move it to the `_posts` folder
 
 ### Typography / Styling Tips
 
@@ -152,7 +152,7 @@ However, if we need to turn the specific value to
 ```
 
 
-In order to be sure that we are using the higher priority selector (and we surely verride all the values) we use the `:root` pseudo-class that represents the highest-level parent element in the document tree, which is typically the <html> element.
+In order to be sure that we are using the higher priority selector (and we surely override all the values) we use the `:root` pseudo-class that represents the highest-level parent element in the document tree, which is typically the <html> element.
 
 #### Override CSS default behavior
 
@@ -183,7 +183,7 @@ In my case I do not want the categories and the license related message to show 
 ```
 
 
-#### Code Snipets
+#### Code Snippets
 While I love Dark Themes, I think reading a really dark blog page could be cumbersome and tiring for the majority of people. Thus I selected to customize the light theme. However, I really love dark backgrounds when I read code. So I wanted to keep my light theme, but borrow the dark theme for the code snippets. To do so, I customized the `_sass/addon/syntax.scss` file, to always select the `dark-syntax mixin`; regardless of the initial/global color scheme preference. Possibly not the most optimal solution (since it can break sync to the main repo) but certainly an easy one to start with. 
 
 Check below the dark themed code snippets
@@ -202,7 +202,7 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-However if we need to override the background value of the inline code snipets (because we do not like to see black backgrounds inline) then we do the following in the file `assets/css/jekyll-theme-chirpy.scss`
+However if we need to override the background value of the inline code snippets (because we do not like to see black backgrounds inline) then we do the following in the file `assets/css/jekyll-theme-chirpy.scss`
 
 ```css
 
@@ -272,7 +272,7 @@ bundle exec jekyll serve --drafts --future
 # If you haven't made any "cosmetics" changes, and made changes just in the posts, you can use --incremental flag
 bundle exec jekyll serve --drafts --future --incremental 
 
-# if you have cloned from Chirpy repo you can use the following to run locall
+# if you have cloned from Chirpy repo you can use the following to run local
 bash tools/run
 
 # if you have cloned from Chirpy repo you can use the following to build locally
