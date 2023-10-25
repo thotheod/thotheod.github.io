@@ -39,7 +39,7 @@ bundle exec jekyll serve
 
 Now open the browser and head to `http://localhost:4000`. If you see something similar to the below image, you are all set!
 
-![Default, empty Jekyll site](/images/how-to-blog/new-jekyll.jpg){: width="700" height="400" }
+![Default, empty Jekyll site](/images/how-to-blog/new-jekyll.jpg){: width="400" height="250" }
 _Default, empty Jekyll site_
 
 
@@ -260,7 +260,7 @@ plugins:
 ```
 
 ### Useful commands
-Below I am gathering some of the basics commands I use to test or build my site
+Below I am gathering some of the basics commands I use to test or build my blog.
 
 ``` bash
 # To run locally the site you need the following command
