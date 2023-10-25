@@ -47,6 +47,9 @@ _Default, empty Jekyll site_
 ### Use Chirpy repo and theme
 Jekyll is powerful, but the starting theme you get out-of-the-box is really limited, as you have seen above. You can of course use [Jekyll Themes](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) and you can of course heavily customize your blog. But you can just focus on what you have to say, and start with a heavily customized and opinionated theme, suitable for technical blogs. Enter [Chirpy](https://chirpy.cotes.page/posts/getting-started/) :rocket: ! ! ! !
 
+![Chirpy](/images/chirpy.png)
+_Chirpy_
+
 > Anything documented here is tested for [release 6.2.3](https://github.com/cotes2020/jekyll-theme-chirpy/releases/tag/v6.2.3)
 {: .prompt-info }
 
