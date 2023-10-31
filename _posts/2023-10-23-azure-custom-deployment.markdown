@@ -14,10 +14,12 @@ Deploying infrastructure and Azure resources efficiently is crucial. Azure offer
 The [Deploy to Azure](https://learn.microsoft.com/azure/azure-resource-manager/templates/deploy-to-azure-button) button is a valuable tool when you want to host your Azure Infrastructure as Code (IaC) artifacts on a public GitHub repository. It simplifies the process of deploying resources to your Azure subscription, allowing for basic parameterization. To add this functionality to your repository's README.md file, you'll need the following:
 
 
-### An Azure Resource Manager (ARM) Template
+### 1. An Azure Resource Manager (ARM) Template
+
 The ARM template is a json file, like the `azuredeploy.json` file you can find in the [web-app-sql-database](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.web/web-app-sql-database) of the Azure/azure-quickstart-templates. Be sure to select the *Raw URL* of the [template](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/quickstarts/microsoft.web/web-app-sql-database/azuredeploy.json). 
 
-### A URL Encoded URL of the ARM Template
+### 2. A URL Encoded URL of the ARM Template
+   
 This URL needs to be URL-encoded to be used. URL encoding ensures that special characters in the URL do not cause issues. You can use an online encoder or run a PowerShell command as shown below. 
 
 ```powershell
@@ -33,7 +35,7 @@ $url = "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/maste
  https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.web%2Fweb-app-sql-database%2Fazuredeploy.json
  ```
 
-### An image used for the Button 
+### 3. An image used for the Button
 To add the button to your repository, you can use the following image markdown snippet
  
  ```markdown
@@ -47,7 +49,8 @@ The image appears as:
 _Deploy to Azure button_
 
 
-### A link to the Azure template attached on the button image
+### 4. A link to the Azure template attached on the button image
+
 To put everything together, you need to add the following markdown snippet 
 
  ``` markdown
