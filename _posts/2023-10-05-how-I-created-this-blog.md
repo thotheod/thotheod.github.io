@@ -174,7 +174,7 @@ In my case I do not want the categories and the license related message to show 
 
 //TODO: add css here to over-write the default css
 
-// hide categries from the blog post end
+// hide categories from the blog post end
 .post-meta.mb-3 {
     display: none;
 }

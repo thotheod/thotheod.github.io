@@ -161,7 +161,7 @@ _Sample Deployment step 1_
 _Sample Deployment step 2_
 
 #### Using functions for further customization
-ou can enhance the customization of the UI form by utilizing [CreateUiDefinition functions](https://learn.microsoft.com/azure/azure-resource-manager/managed-applications/create-uidefinition-functions). 
+You can enhance the customization of the UI form by utilizing [CreateUiDefinition functions](https://learn.microsoft.com/azure/azure-resource-manager/managed-applications/create-uidefinition-functions). 
 
 > These functions look similar to the ones found in the ARM templates, but they are not the same.
 {: .prompt-warning }
