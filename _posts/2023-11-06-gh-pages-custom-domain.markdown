@@ -28,7 +28,7 @@ _Add CNAME to your username.github.io canonical name_
 
 5. If you go back to your [repository's settings](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) and then under *code and automation > Pages* you  will still see that the DNS check is either in progress or has failed. As long as this DNS check is not successful, you cannot "Enforce HTTPS," which is highly recommended. 
 
-![DNS Check in progress](/images/custom-domain-gh-pages/04-dns_check_in_progress.jpg) {: width="400" height="150" }
+![DNS Check in progress](/images/custom-domain-gh-pages/04-dns_check_in_progress.jpg){: width="400" height="150" }
 _DNS Check in progress_
 
 ### Verify Your Custom Domain
