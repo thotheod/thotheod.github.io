@@ -6,4 +6,4 @@ categories: Azure app-innovation
 tags: azure k8s aks app-innovation container-apps containers .net .net-aspire .net8 vs2022
 ---
 
-dfdfsdf
+, cloud ready stack for building observable, production ready, distributed applications. So what exactly does this mean? What problems does it
