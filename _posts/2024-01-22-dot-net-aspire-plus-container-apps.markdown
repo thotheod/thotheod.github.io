@@ -96,8 +96,8 @@ For instance you might need to change the name of the resource group that it wil
 
 [AZD CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-windows) magic works (currently) just for the Azure Container Apps. If you wish to deploy your app to another container platform, like Azure Kubernetes Service, you need to use the community-developed tool [Aspire8](https://prom3theu5.github.io/aspirational-manifests/getting-started.html) for deploying .NET Aspire apps to Kubernetes. This [tool](https://github.com/prom3theu5/aspirational-manifests?tab=readme-ov-file) leverages the [Aspire manifest](https://learn.microsoft.com/en-us/dotnet/aspire/deployment/manifest-format) to automate deploying Aspire apps to Kubernetes clusters. The steps to do the deployment of the .NET Aspire app to Kubernetes cluster are the following
 
-0. Before you start, you need to have the necessary infrastructure already deployed, i.e. the AKS Cluster, the Azure Container Registry etc.
-1. Install the [Aspirate tool](https://github.com/prom3theu5/aspirational-manifests?tab=readme-ov-file) as a global tool in your development machine
+- Before you start, you need to have the necessary infrastructure already deployed, i.e. the AKS Cluster, the Azure Container Registry etc.
+- Install the [Aspirate tool](https://github.com/prom3theu5/aspirational-manifests?tab=readme-ov-file) as a global tool in your development machine
 
 ```powershell
 # Installing as a Global Tool
@@ -107,38 +107,42 @@ dotnet tool install -g aspirate --prerelease
 # dotnet tool update -g aspirate --prerelease
 ```
 
-2. [Login to the ACR](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli#individual-login-with-microsoft-entra-id) so that the container images can be pushed there
+- [Login to the ACR](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli#individual-login-with-microsoft-entra-id) so that the container images can be pushed there
 
 ```powershell
 az acr login --name acrttxxxx.azurecr.io
 ```
 
-3. [Initialize](https://prom3theu5.github.io/aspirational-manifests/init-command.html) the aspirate tool, by bootstrapping certain settings such as Container Registry that will be used for your container builds
+- [Initialize](https://prom3theu5.github.io/aspirational-manifests/init-command.html) the aspirate tool, by bootstrapping certain settings such as Container Registry that will be used for your container builds.
 
 ```powershell
 aspirate init
 ```
 
-4. [Building Projects and Containers](https://prom3theu5.github.io/aspirational-manifests/build-command.html#example)
-   The Build command will build all projects defined in the aspire manifest file, and push the containers to the registry (if specified), or the local docker daemon
+![aspir8 init](/images/net-aspire-aca/05-aspirate-init.jpg){: width="400" height="200" }
+
+- [Building Projects and Containers](https://prom3theu5.github.io/aspirational-manifests/build-command.html#example)
+  The Build command will build all projects defined in the aspire manifest file, and push the containers to the registry (if specified), or the local docker daemon
 
 ```powershell
 aspirate build --container-registry acrttxxx.azurecr.io
 ```
 
-5. [Generate Manifests and Secrets](https://prom3theu5.github.io/aspirational-manifests/generate-command.html)
-   The Build command will build all projects defined in the aspire manifest file, and it will generate the necessary for the deployment `kustomize` files.
+- [Generate Manifests and Secrets](https://prom3theu5.github.io/aspirational-manifests/generate-command.html)
+  The Build command will build all projects defined in the aspire manifest file, and it will generate all the necessary `kustomize` files.
 
 ```powershell
 aspirate generate
 ```
 
-5. [Apply Manifests to a Cluster](https://prom3theu5.github.io/aspirational-manifests/apply-manifests.html)
-   Running the `apply` command will prompt you for information (i.e. if you want to connect in the k8s context in your kubeconfig file) and if you have a secret file, you will be prompted to enter the password to decrypt it.
+- [Apply Manifests to a Cluster](https://prom3theu5.github.io/aspirational-manifests/apply-manifests.html)
+  Running the `apply` command will prompt you for information (i.e. if you want to connect in the k8s context in your kubeconfig file) and if you have a secret file, you will be prompted to enter the password to decrypt it.
 
 ```powershell
 aspirate apply
 ```
+
+![aspir8 generate](/images/net-aspire-aca/06-aspirate-generate.jpg){: width="200" height="400" }
 
 ## Final Thoughts
 
