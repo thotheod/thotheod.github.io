@@ -16,7 +16,8 @@ package-lock.json
 
 # IDE configurations
 .idea
-.vscode
 
 # Misc CHECK ISSUE: https://github.com/cotes2020/jekyll-theme-chirpy/issues/942#issuecomment-1479552757
-# assets/js/dist
+*.map
+sw.min.js
+assets/js/dist
