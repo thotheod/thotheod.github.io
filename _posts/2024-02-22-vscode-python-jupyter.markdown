@@ -29,7 +29,7 @@ A profile in Visual Studio Code is a set of customizations created by adjusting 
 
 ### Python Environment
 
-To run Python you need to have a _Python Environment_ installed on your dev machine. A _Python Virtual Environment_ is an isolated space where you can work on your Python projects, separately from your system-installed Python. The most used one is [Conda](https://docs.conda.io/en/latest/). Conda is an open source tool that comes with either [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/), and it functions as both a package manager and Python environment manager. If this doesn't yet mean a lot to you (aka [you have no idea what to select](https://docs.anaconda.com/free/distro-or-miniconda/) :) ) then I suggest you go with miniconda.
+To run Python you need to have a _Python Environment_ installed on your dev machine. A _Python Virtual Environment_ is an isolated space where you can work on your Python projects, separately from your system-installed Python. The most used one is [Conda](https://docs.conda.io/en/latest/). Conda is an open source tool that comes with either [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/), and it functions as both a package manager and Python environment manager. If this doesn't yet mean a lot to you (aka [you have no idea what to select](https://docs.anaconda.com/free/distro-or-miniconda/) :smile: ) then I suggest you go with miniconda.
 
 ### Install the necessary extensions
 
@@ -41,7 +41,7 @@ As we have already said you need to install [Jupyter](https://marketplace.visual
 
 ### Optional but useful extensions
 
-If you want to work more with Python there more extensions you might find handy [Python Extension Pack](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack). This opinionated extension will install for you many useful extensions :) If you just [accept the defaults (NOT!)](https://devblogs.microsoft.com/devops/top-stories-from-the-microsoft-devops-community-04-06-2022/) you are good to go with this one, otherwise check its documentation and cherry-pick what you think makes more sense for you.
+If you want to work more with Python there more extensions you might find handy [Python Extension Pack](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack). This opinionated extension will install for you many useful extensions :smile: If you just [accept the defaults (NOT!)](https://devblogs.microsoft.com/devops/top-stories-from-the-microsoft-devops-community-04-06-2022/) you are good to go with this one, otherwise check its documentation and cherry-pick what you think makes more sense for you.
 
 ## Cool things you can do with Jupyter Notebooks
 
@@ -55,7 +55,7 @@ In the Python snippets you can execute any terminal commands by prepending the c
 ![Run terminal commands](/images/vscode-python-jupyter/04-terminal.jpg){: width="400" height="200" }
 
 > Please note, for installing Python packages in the correct environment you need to use `%pip install` instead of `!pip install`. More details can be found here: [Install Python packages in Jupyter Notebooks](https://github.com/microsoft/vscode-jupyter/wiki/Installing-Python-packages-in-Jupyter-Notebooks)
-> {: .prompt-warning }
+ {: .prompt-warning }
 
 ### Export Charts as image
 
