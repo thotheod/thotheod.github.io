@@ -52,6 +52,7 @@ To start using Jupyter Notebooks for Python you will be asked to select Kernel. 
 ### Run terminal commands
 
 In the Python snippets you can execute any terminal commands by prepending the command with an exclamation
+
 ![Run terminal commands](/images/vscode-python-jupyter/04-terminal.jpg){: width="400" height="200" }
 
 > Please note, for installing Python packages in the correct environment you need to use `%pip install` instead of `!pip install`. More details can be found here: [Install Python packages in Jupyter Notebooks](https://github.com/microsoft/vscode-jupyter/wiki/Installing-Python-packages-in-Jupyter-Notebooks)
