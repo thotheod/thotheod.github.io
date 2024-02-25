@@ -92,8 +92,7 @@ Interactive Window can be used in any Python file, not only the ones inside the 
 
 ![Python Interactive Windows](/images/vscode-python-jupyter/09-interactive.jpg){: width="400" height="400" }
 
-## Quick sample on using Langchain to call and OpenAI service
 
 ## Final Thoughts
 
-By harnessing the power of Jupyter notebooks, developers can quickly prototype, test, and refine AI-powered features, including leveraging OpenAI's capabilities, all within the comfort of their preferred development environment. In this post we have seen, how a developer can do many of the things a data scientist is doing, from a familiar and beloved tool; the VSCode.
+By harnessing the power of Jupyter notebooks, developers can quickly prototype, test, and refine AI-powered features, including leveraging OpenAI's capabilities, all within the comfort of their preferred development environment. In this post we have seen, how a developer can do many of the things a data scientist is doing, from a familiar and beloved tool; the VSCode. 
