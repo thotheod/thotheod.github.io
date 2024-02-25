@@ -80,7 +80,7 @@ At the top of the notebook there is a button labeled `Variables`. This will open
 
 ### Export Notebook
 
-You can export any of the Jupyter Notbooks to either Html or PDF file, by hitting `Ctrl+Shift+P` and selecting _Jupyter: Export to...._.
+You can export any of the Jupyter Notebooks to either Html or PDF file, by hitting `Ctrl+Shift+P` and selecting _Jupyter: Export to...._.
 
 ### Execute Code in Interactive Window
 
