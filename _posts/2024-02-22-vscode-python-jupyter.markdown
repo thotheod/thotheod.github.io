@@ -18,11 +18,11 @@ Microsoft has integrated Jupyter support directly into Visual Studio Code throug
 
 ## How to run Python and Jupyter Notebooks in Visual Studio Code
 
-To work with [Python](https://www.python.org/) in Jupyter notebooks in your visual studio code you need to install more packages than just the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extension. Let's see what we need. But before that you might need to check what [Visual Studio Code Profiles](https://code.visualstudio.com/docs/editor/profiles) are ;)
+To work with [Python](https://www.python.org/) in Jupyter notebooks in your visual studio code you need to install more packages than just the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extension. Let's see what we need. But before that you might need to check what [Visual Studio Code Profiles](https://code.visualstudio.com/docs/editor/profiles) are :smirk:.
 
 ### VSCode Profiles
 
-A profile in Visual Studio Code is a set of customizations created by adjusting various settings, extensions, and UI layouts within the editor1. Profiles offer a convenient way to switch between different configurations. You can create a _data-science_ profile (or 'Python', or 'Mitsos'... whatever name makes sense for you) so that the extensions you install, and tha UI configurations won't ruin your default profile/workspace. To create a new profile, you can use the _File > Preferences > Profiles > Create Profile_ menu item. To switch between existing profiles you can hot _CTL+Shift+P_ and select _"Profiles: Switch Profile"_
+A profile in Visual Studio Code is a set of customizations created by adjusting various settings, extensions, and UI layouts within the editor1. Profiles offer a convenient way to switch between different configurations. You can create a _data-science_ profile (or 'Python', or 'Mitsos'... whatever name makes sense for you) so that the extensions you install, and tha UI configurations won't ruin your default profile/workspace. To create a new profile, you can use the _File > Preferences > Profiles > Create Profile_ menu item. To switch between existing profiles you can hot _Ctrl+Shift+P_ and select _"Profiles: Switch Profile"_
 
 ![Profiles: Switch Profile](/images/vscode-python-jupyter/01-profile.jpg){: width="400" height="60" }
 ![Profiles: Select Profile](/images/vscode-python-jupyter/02-profile.jpg){: width="400" height="80" }
@@ -95,4 +95,4 @@ Interactive Window can be used in any Python file, not only the ones inside the 
 
 ## Final Thoughts
 
-By harnessing the power of Jupyter notebooks, developers can quickly prototype, test, and refine AI-powered features, including leveraging OpenAI's capabilities, all within the comfort of their preferred development environment. In this post we have seen, how a developer can do many of the things a data scientist is doing, from a familiar and beloved tool; the VSCode. 
+By harnessing the power of Jupyter notebooks, developers can quickly prototype, test, and refine AI-powered features, including leveraging OpenAI's capabilities, all within the comfort of their preferred development environment. In this post we have seen, how a developer can do many of the things a data scientist is doing, from a familiar and beloved tool; the mighty VSCode. 
