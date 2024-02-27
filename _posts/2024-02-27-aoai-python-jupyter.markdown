@@ -6,7 +6,7 @@ categories: Development Python
 tags: vscode python jupyter intelligent-apps aoai openai langchain
 ---
 
-In the [previous blog post](./2024-02-22-vscode-python-jupyter.markdown), we explored the power of [Jupyter Notebook](https://jupyter.org/) within Visual Studio Code. Today, our focus shifts to Azure OpenAI services. We will explore how we can quickly set up a Jupyter Notebook that showcases how we can use Python and AI Orchestrators to get back some meaningful results.
+In the [previous blog post](/posts/vscode-python-jupyter), we explored the power of [Jupyter Notebook](https://jupyter.org/) within Visual Studio Code. Today, our focus shifts to Azure OpenAI services. We will explore how we can quickly set up a Jupyter Notebook that showcases how we can use Python and AI Orchestrators to get back some meaningful results.
 
 ## Azure Resources
 
