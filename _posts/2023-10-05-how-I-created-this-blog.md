@@ -51,7 +51,7 @@ _Default, empty Jekyll site_
 Jekyll is powerful, but the starting theme you get out-of-the-box is really limited, as you have seen above. You can of course use [Jekyll Themes](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) and you can of course heavily customize your blog. But you can just focus on what you have to say, and start with a heavily customized and opinionated theme, suitable for technical blogs. Enter [Chirpy](https://chirpy.cotes.page/posts/getting-started/) :rocket: ! ! ! !
 
 > Anything documented here is tested for [release 6.2.3](https://github.com/cotes2020/jekyll-theme-chirpy/releases/tag/v6.2.3)
-> {: .prompt-info }
+{: .prompt-info }
 
 #### Setting up Chirpy
 
@@ -93,7 +93,7 @@ bundle
 >
 > - Edit `.gitignore` and remove the `assets/js/dist` (you can comment out with #)
 > - Create the folder missing (`assets/js/dist/`), and copy the required files from `https://github.com/cotes2020/chirpy-demo/tree/main/assets/js/dist`
->   {: .prompt-warning }
+{: .prompt-warning }
 
 If everything set correctly, commit your files/changes and push to the blog's repo. The action should run successfully (it should take around a minute) and then you could see your site live.
 To test it locally you can use `bundle exec jekyll serve` or `bash tools/run`
@@ -238,35 +238,35 @@ plugins:
 #### Prompts
 
 > Example showing the prompt-tip
-> {: .prompt-tip }
+{: .prompt-tip }
 
 ```markdown
 > Example showing the prompt-tip
-> {: .prompt-tip }
+{: .prompt-tip }
 ```
 
 > Example showing the prompt-info
-> {: .prompt-info }
+{: .prompt-info }
 
 ```markdown
 > example showing the prompt-info
-> {: .prompt-info }
+{: .prompt-info }
 ```
 
 > Example showing the prompt-warning
-> {: .prompt-warning }
+{: .prompt-warning }
 
 ```markdown
 > Example showing the prompt-warning
-> {: .prompt-warning }
+{: .prompt-warning }
 ```
 
 > Example showing the prompt-danger
-> {: .prompt-danger }
+{: .prompt-danger }
 
 ```markdown
 > Example showing the prompt-danger
-> {: .prompt-danger }
+{: .prompt-danger }
 ```
 
 ### Useful commands

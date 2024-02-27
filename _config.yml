@@ -126,7 +126,7 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 5 # the number of posts displayed per page
+paginate: 10 # the number of posts displayed per page
 
 # The base URL of your site
 baseurl: ""

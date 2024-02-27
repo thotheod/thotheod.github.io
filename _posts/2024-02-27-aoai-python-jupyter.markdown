@@ -27,11 +27,11 @@ After you copy the required values, you can open the OpenAI Studio, to deploy th
 
 ## Visual Studio Code
 
-Since we have the required Azure resources available, let's see what we need to do in VSCode, to create some basic Python samples that will use the OpenAI service.
+Now that we have the required Azure resources available, let's see what we need to do in VSCode, to create some basic Python samples that will use the Azure OpenAI service.
 
 ### Define necessary environment variables
 
-Let's define our environment variables before we start any coding. With Jupyter Notebooks, it's really handy to define all the environment variables in a `.env` file. A sample of the file (that you need to rename to .env) can be found in the [samples repo](https://github.com/thotheod/samples-blog/blob/main/aoai-python/.env.example). Change all the values surrounded with angle brackets with your deployment's values.
+Let's start by defining our environment variables. With Jupyter Notebooks, it's really handy to define all the environment variables in a `.env` file. A sample of the file (that you need to rename to .env) can be found in the [samples repo](https://github.com/thotheod/samples-blog/blob/main/aoai-python/.env.example). Change all the values surrounded with angle brackets with your deployment's values.
 
 ```bash
 AZURE_OPENAI_API_VERSION = "2023-09-01-preview"
@@ -65,7 +65,7 @@ If we do not have a suitable environment we can select the first option `+ Creat
 
 #### Create a new Conda Environment
 
-To avoid the creation of a _.conda_ local python environments you should alternatively create a suitable environment with [conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#)
+To avoid the creation of a _.conda_ local python environments you should alternatively create a suitable environment with [conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#).
 
 If you are working on a windows 11 machine, you first need to open the _Anaconda Powershell Prompt_.
 
@@ -73,7 +73,7 @@ Then you can run `conda env list` to list all the existing conda environments.
 
 ![Conda Existing Environment](/images/aoai-python-jupyter/07-conda-01.jpg){: width="400" }
 
-If you find no suitable environment, you can create a new one with the command `conda create -n ANY_ENV_NAME python=3.11`; the `python=3.11` argument can be omitted if you do not need to specify a Python version. Once the environment is created you will be asked if you agree to download some packages, you need to answer `y` to proceed.
+If you find no suitable environment, you can create a new one with the command `conda create -n ANY_ENV_NAME python=3.11`; the `python=3.11` argument can be omitted if you do not need to specify a Python version. Once the environment is created you will be asked if you agree to download some packages; you need to answer `y` to proceed.
 
 ![Conda Existing Environment](/images/aoai-python-jupyter/07-conda-02.jpg){: width="400" }
 
@@ -91,7 +91,7 @@ Inside the notebook, in a code segment, you can run `%pip install -r requirement
 
 ## Use OpenAI API
 
-Let's explore now how we can call directly the Azure OpenAI APIs with Python, from a notebook. As we have said one of the nice things the Jupyter notebooks have, is that you can mix "areas" with markdown and Python snippets.
+Let's explore now how we can call directly the Azure OpenAI APIs with Python, from a notebook. As we have said one of the nice things the Jupyter Notebooks have, is that you can mix "areas" with markdown and Python snippets.
 
 ### Load the .env environment variable values
 
@@ -293,9 +293,9 @@ print(r.content)
 
 ## Final Thoughts
 
-Langchain gives us a different way to use AI models than just using the basic API or SDK package since it provides a standard interface for working with numerous language models. Moreover, it has many nice features that we haven't explored (yet), such as chaining components. Chaining is a powerful feature which streamlines the development process, by allowing to sequence multiple calls together—whether to a large language model (LLM), a tool, or a data preprocessing step.
+Langchain offers a unique approach to utilizing AI models. Instead of relying solely on basic APIs or SDK packages, it simplifies the process by providing a standard interface for interacting with various language models. One of its standout features is ‘chaining’. This feature enhances the development process by enabling the "chaining" of multiple calls, whether they’re directed towards a large language model (LLM), a tool, or a data preprocessing step.
 
-Langchain’s framework and libraries simplify the integration process, allowing you to focus on creating innovative applications that leverage the power of large language models. It is a great tool to have in your AI toolbox.
+The framework and libraries of Langchain streamline the integration process. This allows developers to concentrate on crafting innovative applications that harness the power of large language models. In short, Langchain is a valuable addition to any AI developer’s toolbox.
 
 ## References
 
