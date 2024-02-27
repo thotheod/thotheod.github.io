@@ -301,4 +301,6 @@ Langchain’s framework and libraries simplify the integration process, allowing
 
 - [Jupyter notebook with sample code](https://github.com/thotheod/samples-blog/blob/main/aoai-python/openai-python-sample.ipynb)
 - [Langchain Azure OpenAI](https://python.langchain.com/docs/integrations/llms/azure_openai)
+- [Langchain - Chat Azure OpenAI](https://python.langchain.com/docs/integrations/chat/azure_chat_openai)
+- [OpenAI API](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)
 - [How to use Jupiter Notebooks in VSCode](/posts/vscode-python-jupyter)
