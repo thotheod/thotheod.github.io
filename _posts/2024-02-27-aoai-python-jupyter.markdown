@@ -294,3 +294,9 @@ print(r.content)
 ## Final Thoughts
 
 Langchain gives us a different way to use AI models than just using the basic API or SDK package. It also helps with things like how often we can use the API and makes tricky things easier to handle. It has many nice features that we haven't explored (yet), such as chaining components. Chaining is a powerful feature which streamlines the development process, by allowing to sequence multiple calls together—whether to a large language model (LLM), a tool, or a data preprocessing step. With langchain you can beyond Standard APIs. It provides a standard interface for working with language models. Langchain’s framework and libraries simplify the integration process, allowing you to focus on creating innovative applications.
+
+## References
+
+- [Jupyter notebook with sample code](https://github.com/thotheod/samples-blog/blob/main/aoai-python/openai-python-sample.ipynb)
+- [Langchain Azure OpenAI](https://python.langchain.com/docs/integrations/llms/azure_openai)
+- [How to use Jupiter Notebooks in VSCode](/posts/vscode-python-jupyter)
