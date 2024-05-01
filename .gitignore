@@ -1,3 +1,6 @@
+# local VS Code folder settings
+.vscode/*
+
 # Bundler cache
 .bundle
 vendor
