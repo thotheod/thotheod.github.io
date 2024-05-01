@@ -1,0 +1,50 @@
+---
+layout: post
+title: "Meet YARP, a versatile, open source .NET Reverse Proxy"
+date: 2024-04-30 15:18:00 +0300
+categories: Azure app-innovation
+tags: azure app-innovation .net .net-aspire .net8
+---
+
+In Web Application Development we tend to use many proxies. Proxies play a crucial role in managing network traffic and in general we can say that they are used to intercept and forward HTTP requests. We could say that they fall into two categories: forward proxies and reverse proxies.
+
+Forward proxies (aka proxy servers) are used by clients to access other servers. They act as an intermediary between clients and servers. Main purpose of forward proxy is to enhance security, privacy, and even performance by hiding the client's IP address and other details from the server, caching content etc.
+
+Reverse proxies resides in front of web servers and act as an entry point for incoming requests. They are used to intercept and forward requests to the appropriate server. They are used to enhance security, performance, and reliability by offloading the servers from handling requests directly.
+
+## YARP
+
+YARP (Yet Another Reverse Proxy) is a .NET library designed to create high-performance, production-ready, and highly customizable reverse proxy servers.
+
+Customization and Flexibility:
+YARP is built on .NET using infrastructure from ASP.NET and .NET 6 (or newer).
+It allows easy customization and tweaking via .NET code to match specific deployment scenarios.
+Developers can customize routing, handling behavior, and configuration programmatically based on their needs.
+Dynamic Routing Rules:
+YARP enables defining dynamic routing rules easily.
+You can route requests based on various conditions such as headers, query parameters, or the path.
+Server Anonymity:
+YARP conceals server identities, enhancing security.
+It acts as a stable client endpoint even when server instances change.
+Performance and Scalability:
+YARP benefits from improvements across the .NET stack, including networking libraries and JIT compiler enhancements.
+It provides load balancing and offloads services through caching, intelligent compression, and SSL encryption.
+Common Solution for Reverse Proxies:
+YARP emerged from collaboration among internal Microsoft teams.
+Existing proxies didn’t fully meet the unique needs of these projects.
+YARP allows customization without implementing the HTTP protocol directly.
+
+## References
+
+- [YARP](https://github.com/microsoft/reverse-proxy)
+- [Building a scalable gateway with .NET for Microsoft AI](https://devblogs.microsoft.com/dotnet/building-a-scalable-gateway-for-microsoft-ai/)
+- [A Heavy Lift: Bringing Kestrel + YARP to Azure App Services](https://devblogs.microsoft.com/dotnet/bringing-kestrel-and-yarp-to-azure-app-services/)
+
+## DELETE UNDER THIS LINE
+
+- https://www.youtube.com/watch?v=P8y8NAroVKk
+
+Simple Demo of app1 app2 that
+a. load balances
+b. routes based on path or header
+c. Configuration. default is appsettings.json - what are the others? do it hot reload.
