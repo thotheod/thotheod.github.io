@@ -289,7 +289,7 @@ using NSwag.AspNetCore;
 // ...
 // ...
 
-//add the before builder.Build();
+//add before builder.Build();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(config =>
 {
@@ -301,7 +301,7 @@ builder.Services.AddOpenApiDocument(config =>
 // ....
 // ...
 
-// add the before app.Run();
+// add before app.Run();
 if (app.Environment.IsDevelopment())
 {
     app.UseOpenApi();
