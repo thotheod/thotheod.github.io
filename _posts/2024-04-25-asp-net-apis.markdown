@@ -325,5 +325,5 @@ The sample APIs we created are really simple and minimal. They are a great start
 - [ASP.NET in .NET 6](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-6/)
 - [ASP.NET in .NET 7](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-dotnet-7/)
 - [ASP.NET in .NET 8](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-dotnet-8/)
-- [Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/web-api/minimal-api?view=aspnetcore-8.0)
+- [Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-8.0&tabs=visual-studio)
 - [Sample API project](https://github.com/thotheod/sample-apis/tree/main)
