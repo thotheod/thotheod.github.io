@@ -65,8 +65,8 @@ When planning your AKS cluster, you should consider the following IP address req
 
 Other limitations that you might need to consider are:
 
-- You can't use [Application Gateway as an Ingress Controller (AGIC)(https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)] for an Overlay cluster - you can however use [Application Gateway for Containers-AGC](https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/) (hope to write a blog soon about this)
-- The of the subnet, VNET and resource group which contains the VNET, must be 63 characters or less. This comes from the fact that these names will be used as labels in AKS worker nodes, and are therefore subjected to Kubernetes label syntax rules.
+- You can't use [Application Gateway as an Ingress Controller (AGIC)](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)] for a CNI Overlay cluster - you can however use [Application Gateway for Containers-AGC](https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/) (hope to write a blog soon about this)
+- The name of the subnet, virtual network and resource group which contains the network, must be 63 characters or less. This comes from the fact that these names will be used as labels in AKS worker nodes, and are therefore subjected to Kubernetes label syntax rules.
 
 ## Set up CNI Overlay AKS Cluster
 
@@ -98,8 +98,6 @@ az aks create -n $CLUSTERNAME -g $RG \
 
 Alternatively, you can use Bicep to create the AKS cluster. The repo below contains an example of a Bicep file that creates an AKS cluster with CNI overlay networking:
 [AKS Helper](https://github.com/thotheod/aks-deployment-helper/blob/main/private-cni-overlay/deploy.azcli)
-
-
 
 ## References
 
