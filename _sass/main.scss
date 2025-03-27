@@ -1,32 +1,16 @@
-<<<<<<< HEAD
-@import 'colors/typography-light';
-@import 'colors/typography-dark';
-@import 'addon/variables';
-@import 'variables-hook';
-@import 'addon/module';
-@import 'addon/syntax';
-@import 'addon/commons';
-@import 'layout/home';
-@import 'layout/post';
-@import 'layout/tags';
-@import 'layout/archives';
-@import 'layout/categories';
-@import 'layout/category-tag';
-
-//TODO: add css here to over-write the default css
-
-// hide categries from the blog post end
-.post-meta.mb-3 {
-    display: none;
-}
-
-// hide the license from the blog post end
-.license-wrapper {
-    display: none;  
-}
-=======
 @forward 'base';
 @forward 'components';
 @forward 'layout';
 @forward 'pages';
->>>>>>> upstream/master
+
+// TODO: add css here to over-write the default css
+
+// hide categries from the blog post end
+.post-meta.mb-3 {
+  display: none;
+}
+
+// hide the license from the blog post end
+.license-wrapper {
+  display: none;
+}

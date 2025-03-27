@@ -1,53 +1,7 @@
-<<<<<<< HEAD:_sass/addon/syntax.scss
-/*
-* The syntax highlight.
-*/
-
-@import 'colors/syntax-light';
-@import 'colors/syntax-dark';
-
-html {
-  @media (prefers-color-scheme: light) {
-    &:not([data-mode]),
-    &[data-mode='light'] {
-      // @include light-syntax;
-      @include dark-syntax;
-    }
-
-    &[data-mode='dark'] {
-      @include dark-syntax;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    &:not([data-mode]),
-    &[data-mode='dark'] {
-      @include dark-syntax;
-    }
-
-    &[data-mode='light'] {
-      // @include light-syntax;
-      @include dark-syntax;
-    }
-  }
-}
-
-/* -- code snippets -- */
-
-%code-snippet-bg {
-  background-color: var(--highlight-bg-color);
-}
-
-%code-snippet-padding {
-  padding-left: 1rem;
-  padding-right: 1.5rem;
-}
-=======
 @use '../abstracts/variables' as v;
 @use '../abstracts/breakpoints' as bp;
 @use '../abstracts/mixins' as mx;
 @use '../abstracts/placeholders';
->>>>>>> upstream/master:_sass/base/_syntax.scss
 
 .highlighter-rouge {
   color: var(--highlighter-rouge-color);
