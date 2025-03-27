@@ -8,6 +8,7 @@ Gemfile.lock
 
 # Jekyll cache
 .jekyll-cache
+.jekyll-metadata
 _site
 
 # RubyGems
@@ -19,8 +20,11 @@ package-lock.json
 
 # IDE configurations
 .idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
 
-# Misc CHECK ISSUE: https://github.com/cotes2020/jekyll-theme-chirpy/issues/942#issuecomment-1479552757
-*.map
-sw.min.js
+# Misc
+_sass/vendors
 assets/js/dist

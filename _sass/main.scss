@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'colors/typography-light';
 @import 'colors/typography-dark';
 @import 'addon/variables';
@@ -23,3 +24,9 @@
 .license-wrapper {
     display: none;  
 }
+=======
+@forward 'base';
+@forward 'components';
+@forward 'layout';
+@forward 'pages';
+>>>>>>> upstream/master
