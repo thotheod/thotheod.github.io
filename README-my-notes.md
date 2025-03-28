@@ -6,6 +6,7 @@ If after update there errors for missings ***.min.js*** files, then run the foll
 npm install
 npm run build
 
+
 # Then, commit the changes and push them to the remote repository.
 git add assets/js/dist _sass/vendors -f
 git commit -m "update js files"
