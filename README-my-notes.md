@@ -1,4 +1,4 @@
-# notes for upgrade
+# Notes for upgrade
 
 ## missing js files from dist folder
 If after update there errors for missings ***.min.js*** files, then run the following command to generate them:
