@@ -2,7 +2,7 @@
 layout: post
 title: "Encryption or hashing with Azure Key Vault"
 date: 2025-04-07 15:18:00 +0300
-categories: Azure app-innovation
+categories: Development c-sharp
 tags: azure app-innovation .net .net8 c-sharp
 ---
 Cryptography is really a complex field. Among several cryptographic techniques, encryption and hashing are two fundamental concepts that serve different purposes in securing data.
