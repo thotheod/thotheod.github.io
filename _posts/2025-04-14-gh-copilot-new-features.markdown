@@ -103,4 +103,4 @@ GitHub Copilot has introduced several new features that enhance the developer ex
 
 - [VSCode 1.99 release](https://code.visualstudio.com/updates/v1_99)
 - [Model multipliers documentation](https://docs.github.com/en/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests#model-multipliers)
-- [_Copilot Plans_](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot#comparing-copilot-plans)
+- [Copilot Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot#comparing-copilot-plans)
