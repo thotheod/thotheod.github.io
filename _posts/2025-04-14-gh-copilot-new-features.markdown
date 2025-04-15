@@ -99,6 +99,8 @@ End-to-end vision support is still in preview, but greatly improved in this vers
 
 GitHub Copilot has introduced several new features that enhance the developer experience and improve productivity. The new Agent Mode, advanced codebase search, and the ability to bring your own LLMs are just a few of the exciting updates that make GitHub Copilot an even more powerful tool for developers. As we celebrate Microsoft's 50th anniversary, it's clear that the company is committed to pushing the boundaries of technology and empowering developers to achieve more.
 
+In our next blog post, we'll dive deeper into Agent Mode and provide tips on how to use it effectively.
+
 ## References
 
 - [VSCode 1.99 release](https://code.visualstudio.com/updates/v1_99)
