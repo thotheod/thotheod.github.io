@@ -65,7 +65,7 @@ When planning your AKS cluster, you should consider the following IP address req
 
 Other limitations that you might need to consider are:
 
-- You can't use [Application Gateway as an Ingress Controller (AGIC)](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)] for a CNI Overlay cluster - you can however use [Application Gateway for Containers-AGC](https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/) (hope to write a blog soon about this)
+- You can't use [Application Gateway as an Ingress Controller (AGIC)](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)] for a CNI Overlay cluster - you can however use [Application Gateway for Containers-AGC](https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/) (hope to write a blog soon about this) (**April 2025 UPDATE:** [AGIC is now supported for CNI Overlay](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview#container-networking-and-agic))
 - The name of the subnet, virtual network and resource group which contains the network, must be 63 characters or less. This comes from the fact that these names will be used as labels in AKS worker nodes, and are therefore subjected to Kubernetes label syntax rules.
 
 ## Set up CNI Overlay AKS Cluster
