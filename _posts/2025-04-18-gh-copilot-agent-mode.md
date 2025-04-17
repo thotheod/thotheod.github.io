@@ -7,8 +7,6 @@ categories: blog tech
 tags: blog jekyll github-pages development github github-copilot vscode
 ---
 
-Who enjoys setting up a new project environment? Installing dependencies, configuring compilers, and pinning specific library versions?
-
 Who loves setting up a new project environment? Wrestling with dependencies, configuring compilers, and pinning library versions? Definitely not me. I’m all about avoiding that hassle, and just thinking about the setup ‘mess’ has stopped me from starting projects more times than I’d like to admit. Getting your environment right takes precious time; reading documentation, following deployment guides, and troubleshooting. But being lazy isn’t a bad thing! With GitHub Copilot Agent Mode, you’ve got a trusty sidekick to handle the heavy lifting.
 
 ## A Bit of (Mostly Irrelevant) Background
@@ -43,6 +41,7 @@ Then I thought, why not use the #fetch tool? It’s a great way to get more deta
 ![GitHub Copilot Ask mode - Where is the documentation](/images/gh-copilot-agent-mode/02-gh-copilot-ask-get-doc.jpg){: width="300" height="270" }
 
 Great, so let me now give it the same prompt together with the `#fetch` documentation tool. Voiala! I got a much better response. I was impressed! :open_mouth:
+
 ![GitHub Copilot Ask Mode - Second Attempt](/images/gh-copilot-agent-mode/03-gh-copilot-ask-with-fetch-doc.jpg){: width="400" height="600" }
 
 I got a list of commands to run, it was exactly what I needed. I just had to copy and paste it into my terminal, and I was good to go...... Or was it? :smirk:
@@ -83,5 +82,3 @@ I’m not saying that GitHub Copilot Agent Mode is a magic bullet that will solv
 GitHub Copilot in general will be so obvious in the near future, as code completion is supposed to be a standard feature in any IDE. No one who loves themselves will ever go back to the old way of writing code in Notepad or vi. :smile: The same way, some kind of AI Copilot will be a standard for all developers. :sparkles:
 
 I’ve been a lazy developer. I’m not talking about the kind of lazy that means I don’t want to work hard. I’m talking about the kind of lazy that means I want to avoid repetitive tasks and focus on what really matters: writing code and building cool stuff. And for that, I think GitHub Copilot ticks all the boxes! :sparkles:
-
-....
