@@ -87,6 +87,8 @@ But not every _Premium Model_ you will use will consume the same amount of the a
 
 However, you are now given the option to bring your own LLMs. This means you can integrate your preferred LLMs into GitHub Copilot, for popular providers such as Azure, Anthropic, Gemini, Open AI, Ollama, and Open Router. This allows you to use new models that are not natively supported by Copilot the very first day that they're released.
 
+## MCP Servers in Agent mode
+One of the most exciting new features of GitHub Copilot is the support for **Model Context Protocol (MCP)** servers in agent mode, allowing AI models to interact with external tools, applications, and data sources dynamically. MCP servers can be configured within VS Code settings, supporting input variables for secure and flexible setups. Users can add new MCP servers via command-line tools or AI-assisted setup, and the servers start on demand to optimize resource usage. Additionally, built-in tools in agent mode enable enhanced functionalities such as fetching web content and performing deep code analysis.
 ## Next Edit Suggestions
 
 Next Edit Suggestions is a new feature that allows GitHub Copilot to suggest the next line of code based on the current context. This feature is designed to help developers write code faster and more efficiently by providing real-time suggestions as they type. Next Edit Suggestions can be particularly useful for repetitive tasks or when working with complex code structures.
